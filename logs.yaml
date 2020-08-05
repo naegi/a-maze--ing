@@ -1,0 +1,20 @@
+name: Game
+level: debug
+handlers:
+  stream:
+    type: stream
+    activate: True
+    format: "%(levelname)s - %(name)s - %(message)s" 
+    output: stdout
+    level: debug
+  file:
+    type: file
+    activate: True
+    format: "%(asctime)s - %(levelname)s - %(name)s - %(message)s"
+    output: all.logs
+    level: debug
+
+
+childs:
+  test:
+    level: info
